@@ -6,7 +6,6 @@ package com.kodilla;
 public class Calculator {
     public double firstNumber;
     public double secondNumber;
-    public double result;
 
     public Calculator(double firstNumber, double secondNumber) {
         this.firstNumber = firstNumber;
@@ -14,13 +13,17 @@ public class Calculator {
     }
 
     public void addNumbers() {
-        result=firstNumber+secondNumber;
-        return System.out.println(firstNumber+secondNumber);
+       System.out.println("Wynik dodawania: " + (this.firstNumber + this.secondNumber));
+    }
+
+    public void subNumbers()    {
+        System.out.println("Wynik odejmowania: " + (this.firstNumber - this.secondNumber));
     }
 
     public static void main(String args[])  {
-        Calculator calculator = new Calculator(4.0, 4.0);
+        Calculator calculator = new Calculator(6, 4);
         calculator.addNumbers();
+        calculator.subNumbers();
     }
 
 }
